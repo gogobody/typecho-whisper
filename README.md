@@ -4,6 +4,7 @@ typecho 时光机单页
 ![](https://cdn.jsdelivr.net/gh/gogobody/blog-img/blogimg/20210303225221.png)
 
 > @author: 即刻学术 www.ijkxs.com
+> 
 > 单页适用于任何 typecho 主题。且不会对原来的主题产生任何影响。
 ## 基本信息
 
