@@ -17,7 +17,7 @@ function threadedComments($comments, $options)
     $db = Typecho_Db::get();
 
     $enable_comment = $options->class->fields->enable_comment?true:false;
-    if ($options->fields->enable_comment == '0'){
+    if ($options->class->fields->enable_comment == '0'){
         $enable_comment = false;
     }
 ?>

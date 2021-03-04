@@ -760,7 +760,18 @@ class DyUtils {
 function ParseAvatar($mail, $re = 0, $id = 0)
 {
     global $options;
-    $a = $options->JGravatars;
+    // 多个头像源，可以自己换
+    $JGravatars = array(
+        'gravatar.helingqi.com/wavatar' => '禾令奇（默认）',
+        'www.gravatar.com/avatar' => 'gravatar的www源',
+        'cn.gravatar.com/avatar' => 'gravatar的cn源',
+        'secure.gravatar.com/avatar' => 'gravatar的secure源',
+        'sdn.geekzu.org/avatar' => '极客族',
+        'cdn.v2ex.com/gravatar' => 'v2ex源',
+        'dn-qiniu-avatar.qbox.me/avatar' => '七牛源[不建议]',
+        'gravatar.loli.net/avatar' => 'loli.net源',
+    );
+    $a = $JGravatars[0];
     $b = 'https://' . $a . '/';
     $c = strtolower($mail);
     $d = md5($c);
