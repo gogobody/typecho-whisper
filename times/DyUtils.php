@@ -771,7 +771,7 @@ function ParseAvatar($mail, $re = 0, $id = 0)
         'dn-qiniu-avatar.qbox.me/avatar' => '七牛源[不建议]',
         'gravatar.loli.net/avatar' => 'loli.net源',
     );
-    $a = $JGravatars[0];
+    $a = array_keys($JGravatars)[0];
     $b = 'https://' . $a . '/';
     $c = strtolower($mail);
     $d = md5($c);
