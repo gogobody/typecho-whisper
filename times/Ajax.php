@@ -107,7 +107,8 @@ function parseMixContent($_var_22, $_var_23)
 // 获取时光机页面的 time_code
 function getTimeCode($cid){
     $db = Typecho_Db::get();
-    return $db->fetchObject($db->select('str_value')->from('table.fields')->where('cid = ? and name = ?',$cid,'time_code'))->str_value;
+    $value = $db->fetchObject($db->select('str_value')->from('table.fields')->where('cid = ? and name = ?',$cid,'time_code'))->str_value;
+    return md5($value);
 
 }
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -121,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			//$options = Helper::options();
             $user_time_code = getTimeCode($cid);
 
-            if ($time_code == $user_time_code) {
+            if (md5($time_code) == $user_time_code) {
 				if ($msg_type == 'mixed_post') {
 					$thisText = '<!--markdown-->' . parseMixPostContent($thisText, $options);
 					$mid = $_POST['mid'];
