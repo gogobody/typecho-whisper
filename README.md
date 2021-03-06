@@ -19,7 +19,14 @@ api 参考：[ljyngup博客](https://blog.ljyngup.com/archives/787.html/)
 
 ## 本单页使用教程
 下载文件。拷贝文件夹`times`和文件`page.whisper.php`到你使用的主题目录下。  
-新建单页，模板选择 超级时光机 。搞定。
+新建单页，模板选择 超级时光机 。
+在你的主题 functions.php 上面加
+```
+require_once 'times/Ajax.php';
+```
+搞定。
+
+自建公众号查看 [handsome主题时光机微信发送系统](https://www.ifking.cn/p/113.html)
 
 ## 相关接口（开发者可以看，新手略过）
 API 使用事项。
